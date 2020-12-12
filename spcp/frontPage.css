@@ -1,0 +1,92 @@
+*{
+  background-color: black;
+  font-family: "Papyrus";
+}
+div.whole, h1, main, h2{
+  padding: 10px;
+}
+div.whole, div.scrollmenu a{
+  color: white;
+  margin-left: 50px;
+}
+div.whole{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  border: 1px solid white;
+  margin: 20px;
+}
+
+.lines {
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  float: left;
+  height: 90vh;
+  margin-left: 60px;
+}
+
+header{
+  flex-shrink: 0;
+  margin: 20px;
+}
+h1{
+  margin: 10px;
+}
+
+main{
+  flex-grow: 1;
+  margin:20px;
+  border: 1px solid white;
+}
+h2{
+  margin:0px;
+}
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#Python {
+  top: 20px;
+  background-color: #c43a36;
+}
+#C {
+  top: 80px;
+  background-color: #cd862d;
+}
+#Cplus {
+  top: 140px;
+  background-color: #c6d624;
+}
+#Csharp {
+  top: 200px;
+  background-color: #66df1b;
+}
+#Java {
+  top: 260px;
+  background-color: #12e832;
+}
+#JS {
+  top: 320px;
+  background-color: #09f1a6;
+}
+#PHP {
+  top: 380px;
+  background-color: #00c6fa;
+}
+#R {
+  top: 440px;
+  background-color: #0083fa;
+}
