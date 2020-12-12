@@ -25,6 +25,10 @@ div.whole{
   height: 90vh;
   margin-left: 60px;
 }
+a{
+	text-decoration : none;
+	color: white;
+}
 
 header{
   flex-shrink: 0;
