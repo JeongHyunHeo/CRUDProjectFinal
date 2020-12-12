@@ -1,0 +1,187 @@
+*{
+  background-color: black;
+  font-family: "Papyrus";
+}
+div.whole, h1, main, h2{
+  padding: 10px;
+}
+div.whole, div.scrollmenu a{
+  color: white;
+  margin-left: 50px;
+}
+div.whole{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  border: 1px solid white;
+  margin: 20px;
+}
+
+.lines {
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  float: left;
+  height: 90vh;
+  margin-left: 60px;
+}
+
+header{
+  flex-shrink: 0;
+}
+h1{
+  margin: 10px;
+}
+.button {
+  border-radius: 4px;
+  border: 1px solid green;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  float: right;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  background-color: inherit;
+}
+.button span:after {
+  content: '\002B';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span{
+  padding-right: 10px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+main{
+  flex-grow: 1;
+  margin: 20px;
+  border: 1px solid white;
+  padding: 5px;
+}
+.accordion {
+  background-color: #ccc;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #eee;
+}
+.panel {
+  padding: 0 18px;
+  background-color: black;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+p{
+  background-color: black;
+  color: white;
+}
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+#mySidenav a:hover {
+  left: 0;
+}
+.edit, .delete{
+  margin-bottom: 10px;
+  float: right;
+}
+.edit {
+  border-color: #a3c1ad;
+  color: green;
+}
+.edit:hover {
+  background-color: green;
+  color: white;
+}
+.delete {
+  border-color: #f8674f;
+  color: red;
+}
+.delete:hover {
+  background: red;
+  color: white;
+}
+.back {
+  float: left;
+  width: 50px;
+  height: 200px;
+  z-index: 1;
+}
+
+#Python {
+  top: 20px;
+  background-color: #c43a36;
+}
+#C {
+  top: 80px;
+  background-color: #cd862d;
+}
+#Cplus {
+  top: 140px;
+  background-color: #c6d624;
+}
+#Csharp {
+  top: 200px;
+  background-color: #66df1b;
+}
+#Java {
+  top: 260px;
+  background-color: #12e832;
+}
+#JS {
+  top: 320px;
+  background-color: #09f1a6;
+}
+#PHP {
+  top: 380px;
+  background-color: #00c6fa;
+}
+#R {
+  top: 440px;
+  background-color: #0083fa;
+}
+
+footer{
+  flex-shrink: 0;
+  margin:10px
+}
+
+.foldtl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 1px solid white;
+  color: white;
+}
