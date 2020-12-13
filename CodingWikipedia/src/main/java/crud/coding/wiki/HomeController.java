@@ -20,7 +20,8 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
-		model.addAttribute("mainPage", boardService.getBoardList());
+		model.addAttribute("list", boardService.getBoardList());
+		System.out.println("데이터 불러오는 중!");
 		
 		return "mainPage";
 	}
@@ -50,5 +51,23 @@ public class HomeController {
 		else
 			System.out.println("데이터 삭제 성공!");
 		return "redirect:/";
+	}
+	
+	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+	public String editPost(@PathVariable("id") int id, Model model) {
+		BoardVO boardVO = boardService.getBoard(id);
+		model.addAttribute("each", boardVO);
+		return "editPage";
+	}
+	
+	@RequestMapping(value = "/edit/editok", method = RequestMethod.POST)
+	public String editPostOk(BoardVO vo) {
+		if(boardService.updateBoard(vo) == 0)
+			System.out.println("데이터 수정 실패!");
+		else
+			System.out.println("데이터 수정 성공!");
+		
+
+	
 	}
 }

@@ -17,18 +17,18 @@ public class BoardDAO {
 	JdbcTemplate jdbcTemplate;
 
 	public int insertBoard(BoardVO vo) {
-		String sql = "insert into BOARDS (title, writer, content, category) values (" + "'" + vo.getTitle() + "'," + "'"
+		String sql = "insert into codewiki (title, writer, content, category) values (" + "'" + vo.getTitle() + "'," + "'"
 				+ vo.getWriter() + "'," + "'" + vo.getContent() + "'," + "'" + vo.getCategory() + "')";
 		return jdbcTemplate.update(sql);
 	}
 
 	public int deleteBoard(int seq) {
-		String sql = "delete from BOARDS where seq = " + seq;
+		String sql = "delete from codewiki where seq = " + seq;
 		return jdbcTemplate.update(sql);
 	}
 
 	public int updateBoard(BoardVO vo) {
-		String sql = "update BOARDS set title='" + vo.getTitle() + "'," + " title = '" + vo.getTitle() +
+		String sql = "update codewiki set title='" + vo.getTitle() + "'," + " title = '" + vo.getTitle() +
 				"'," + " writer='" + vo.getWriter() + "'," + " content='" + vo.getContent() + "'," + " category='" + vo.getCategory() + "' where seq = " + vo.getSeq();
 		return jdbcTemplate.update(sql);
 	}
@@ -48,12 +48,12 @@ public class BoardDAO {
 	}
 
 	public BoardVO getBoard(int seq) {
-		String sql = "select * from BOARDS where seq=" + seq;
+		String sql = "select * from codewiki where seq=" + seq;
 		return jdbcTemplate.queryForObject(sql, new BoardRowMapper());
 	}
 
 	public List<BoardVO> getBoardList() {
-		String sql = "select * from BOARDS order by regdate desc";
+		String sql = "select * from codewiki order by regdate desc";
 		return jdbcTemplate.query(sql, new BoardRowMapper());
 	}
 }

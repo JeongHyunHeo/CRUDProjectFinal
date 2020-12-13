@@ -20,18 +20,18 @@
 				<article>
 					<form method="post" action="save">
 						<label for="Topic">Topic:</label><br> <input type="text"
-							id="Topic" name="Topic" style="color: white;"><br> <br>
-						<label for="Content">Content:</label><br>
-						<textarea rows="10" cols="140" placeholder=" Input content"
-							style="color: white;"></textarea>
+							id="category" name="category" style="color: white;"><br>
+						<br> <label for="Content">Content:</label><br>
+						<textarea id="content" name="content" rows="10" cols="140"
+							placeholder=" Input content" style="color: white;"></textarea>
+						<input type="submit" value="save" class="save">
+					</form>
 				</article>
 	</main>
 	<footer>
 		<form>
 			<input type="button" value="back" class="back"
 				onclick="history.back()">
-		</form>
-		<input type="submit" value="save" class="save">
 		</form>
 
 	</footer>

@@ -11,10 +11,14 @@
 <div class="lines"></div>
 <div class="whole">
 	<div id="mySidenav" class="sidenav">
-		<a href="#" id="Python">Python</a> <a href="#" id="C">C</a> <a
-			href="#" id="Cplus">C++</a> <a href="#" id="Csharp">C#</a> <a
-			href="#" id="Java">Java</a> <a href="#" id="JS">JS</a> <a href="#"
-			id="PHP">PHP</a> <a href="#" id="R">R</a>
+		<a href="#" id="Python">Python</a>
+		<a href="#" id="C">C</a>
+		<a href="#" id="Cplus">C++</a>
+		<a href="#" id="Csharp">C#</a>
+		<a href="#" id="Java">Java</a>
+		<a href="#" id="JS">JS</a>
+		<a href="#" id="PHP">PHP</a>
+		<a href="#" id="R">R</a>
 	</div>
 	<header>
 		<h1>Get Language</h1>
@@ -23,8 +27,9 @@
 		</button>
 	</header>
 	<main>
+		<!-- repeat for each topic posted -->
 		<c:forEach var="each" items="${list}">
-			<button class="accordion">${each.topic}</button>
+			<button class="accordion">${each.category}</button>
 			<div class="panel">
 				<p>${each.content}</p>
 				<p>written at ${each.regdate}</p>
@@ -32,42 +37,6 @@
 					type="button" value="edit" class="edit">
 			</div>
 		</c:forEach>
-		<!-- repeat for each topic posted -->
-
-		<button class="accordion">Section 2</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
-
-		<button class="accordion">Section 3</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
-
-		<button class="accordion">Section 4</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
-
-		<button class="accordion">Section 5</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
-
-		<button class="accordion">Section 6</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
-
-		<button class="accordion">Section 7</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
-
-		<button class="accordion">Section 8</button>
-		<div class="panel">
-			<p>Lorem ipsum...</p>
-		</div>
 
 		<script>
 			var acc = document.getElementsByClassName("accordion");
