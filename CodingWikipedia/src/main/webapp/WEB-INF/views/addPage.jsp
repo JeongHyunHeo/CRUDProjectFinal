@@ -14,26 +14,24 @@
 		<h1>Add Topic</h1>
 	</header>
 	<main>
-		<h2>
-			Get Language
-			<h2>
-				<article>
-					<form method="post" action="save">
-						<label for="Topic">Topic:</label><br> <input type="text"
-							id="category" name="category" style="color: white;"><br>
-						<br> <label for="Content">Content:</label><br>
-						<textarea id="content" name="content" rows="10" cols="140"
-							placeholder=" Input content" style="color: white;"></textarea>
-						<input type="submit" value="save" class="save">
-					</form>
-				</article>
+		<article>
+			<form method="post" action="save">
+				<label for="Category">Category:</label><br>
+				<input type="text" id="category" name="category"><br> <label
+					for="Title">Title:</label><br> <input type="text" id="title"
+					name="title"><br> <label for="Writer">Writer:</label><br>
+				<input type="text" id="writer" name="writer"><br> <br>
+				<label for="Content">Content:</label><br>
+				<textarea id="content" name="content" placeholder=" Input content"
+					class="content"></textarea>
+				<input type="submit" value="save" class="save">
+			</form>
+		</article>
 	</main>
 	<footer>
 		<form>
 			<input type="button" value="back" class="back"
 				onclick="history.back()">
 		</form>
-
 	</footer>
 </div>
-</html>

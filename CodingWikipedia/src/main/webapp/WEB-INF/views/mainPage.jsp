@@ -11,14 +11,14 @@
 <div class="lines"></div>
 <div class="whole">
 	<div id="mySidenav" class="sidenav">
-		<a href="#" id="Python">Python</a>
-		<a href="#" id="C">C</a>
-		<a href="#" id="Cplus">C++</a>
-		<a href="#" id="Csharp">C#</a>
-		<a href="#" id="Java">Java</a>
-		<a href="#" id="JS">JS</a>
-		<a href="#" id="PHP">PHP</a>
-		<a href="#" id="R">R</a>
+		<a href="./Python" id="Python">Python</a>
+		<a href="./C" id="C">C</a>
+		<a href="./Cplus" id="Cplus">C++</a>
+		<a href="./Csharp" id="Csharp">C#</a>
+		<a href="./Java" id="Java">Java</a>
+		<a href="./JS" id="JS">JS</a>
+		<a href="./php" id="PHP">PHP</a>
+		<a href="./R" id="R">R</a>
 	</div>
 	<header>
 		<h1>Get Language</h1>
@@ -29,12 +29,12 @@
 	<main>
 		<!-- repeat for each topic posted -->
 		<c:forEach var="each" items="${list}">
-			<button class="accordion">${each.category}</button>
+			<button class="accordion">${each.title}</button>
 			<div class="panel">
 				<p>${each.content}</p>
 				<p>written at ${each.regdate}</p>
-				<input type="button" value="delete" class="delete"> <input
-					type="button" value="edit" class="edit">
+				<input type="button" value="delete" class="delete" onclick="location.href='delete/${each.seq}'"> <input
+					type="button" value="edit" class="edit" onclick="location.href='edit/${each.seq}'">
 			</div>
 		</c:forEach>
 
@@ -59,10 +59,6 @@
 
 <footer>
 	<!-- <input type="button" value="add" class="button" style="background-color: #6ca580;"> -->
-	<form>
-		<input type="button" value="back" class="foldtl"
-			onclick="history.back()">
-	</form>
 </footer>
 
 

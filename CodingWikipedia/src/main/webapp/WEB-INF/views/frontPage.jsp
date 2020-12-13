@@ -5,20 +5,20 @@
 <html>
 <head>
     <title>Programming Wikipedia</title>
-    <link rel="stylesheet" href="frontPage.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/frontPage.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <div class="lines"></div>
 <div class="whole">
     <div id="mySidenav" class="sidenav">
-      <a href="#" id="Python">Python</a>
-      <a href="#" id="C">C</a>
-      <a href="#" id="Cplus">C++</a>
-      <a href="#" id="Csharp">C#</a>
-      <a href="#" id="Java">Java</a>
-      <a href="#" id="JS">JS</a>
-      <a href="#" id="PHP">PHP</a>
-      <a href="#" id="R">R</a>
+      <a href="./Python" id="Python">Python</a>
+		<a href="./C" id="C">C</a>
+		<a href="./Cplus" id="Cplus">C++</a>
+		<a href="./Csharp" id="Csharp">C#</a>
+		<a href="./Java" id="Java">Java</a>
+		<a href="./JS" id="JS">JS</a>
+		<a href="./php" id="PHP">PHP</a>
+		<a href="./R" id="R">R</a>
     </div>
     <header>
       <h1>Programming Wikipedia</h1>
@@ -26,7 +26,7 @@
     </header>
     <main>
         <h2>웹사이트 사용방법<h2>
-        <img src="menu.png" alt="Girl in a jacket" width="50" height="300">
+        <img src="${pageContext.request.contextPath}/resources/img/menu.png" alt="Girl in a jacket" width="50" height="300">
         <p style="font-size: 12px;"><= 옆에 매뉴중 언어를 하나 선택에서 누르고</p>
         <!-- 나중에 실행 캡쳐화면 추가 -->
 

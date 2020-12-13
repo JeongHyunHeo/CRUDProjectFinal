@@ -18,10 +18,66 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	
+	//FrontPage Request Mapping
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
+		
+		return "frontPage";
+	}
+	
+	//MainPage Request Mapping
+	@RequestMapping(value="/main", method = RequestMethod.GET)
+	public String main(Model model){
 		model.addAttribute("list", boardService.getBoardList());
-		System.out.println("데이터 불러오는 중!");
+		
+		return "mainPage";
+	}
+	@RequestMapping(value = "/C", method = RequestMethod.GET)
+	public String c(Model model) {
+		model.addAttribute("list", boardService.getBoardListC());
+		
+		return "mainPage";
+	}
+	@RequestMapping(value = "/Python", method = RequestMethod.GET)
+	public String python(Model model) {
+		model.addAttribute("list", boardService.getBoardListPython());
+		
+		return "mainPage";
+	}
+	@RequestMapping(value = "/Cplus", method = RequestMethod.GET)
+	public String cplus(Model model) {
+		model.addAttribute("list", boardService.getBoardListCplus());
+		
+		return "mainPage";
+	}
+	@RequestMapping(value = "/Csharp", method = RequestMethod.GET)
+	public String csharp(Model model) {
+		model.addAttribute("list", boardService.getBoardListCsharp());
+		
+		return "mainPage";
+	}
+	@RequestMapping(value = "/Java", method = RequestMethod.GET)
+	public String java(Model model) {
+		model.addAttribute("list", boardService.getBoardListJava());
+		
+		return "mainPage";
+	}
+	@RequestMapping(value = "/JS", method = RequestMethod.GET)
+	public String js(Model model) {
+		model.addAttribute("list", boardService.getBoardListJS());
+		
+		return "mainPage";
+	}
+	@RequestMapping(value = "/php", method = RequestMethod.GET)
+	public String php(Model model) {
+		model.addAttribute("list", boardService.getBoardListPHP());
+		
+		return "mainPage";
+	}
+	@RequestMapping(value = "/R", method = RequestMethod.GET)
+	public String R(Model model) {
+		model.addAttribute("list", boardService.getBoardListR());
 		
 		return "mainPage";
 	}
@@ -40,7 +96,7 @@ public class HomeController {
 		else
 			System.out.println("데이터 추가 성공!");
 		
-		return "redirect:/";
+		return "redirect:/main";
 	}
 	
 	//Deleting Page
@@ -53,6 +109,8 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
+	
+	//Editting Page
 	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model) {
 		BoardVO boardVO = boardService.getBoard(id);
@@ -67,7 +125,7 @@ public class HomeController {
 		else
 			System.out.println("데이터 수정 성공!");
 		
-
+		return "redirect:/";
 	
 	}
 }

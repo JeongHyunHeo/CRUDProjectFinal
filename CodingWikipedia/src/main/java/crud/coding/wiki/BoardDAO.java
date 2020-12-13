@@ -29,7 +29,7 @@ public class BoardDAO {
 
 	public int updateBoard(BoardVO vo) {
 		String sql = "update codewiki set title='" + vo.getTitle() + "'," + " title = '" + vo.getTitle() +
-				"'," + " writer='" + vo.getWriter() + "'," + " content='" + vo.getContent() + "'," + " category='" + vo.getCategory() + "' where seq = " + vo.getSeq();
+				"'," +  " writer='" + vo.getWriter() + "'," +  " content='" + vo.getContent() + "'," + " category='" + vo.getCategory() + "' where seq = " + vo.getSeq();
 		return jdbcTemplate.update(sql);
 	}
 
@@ -54,6 +54,39 @@ public class BoardDAO {
 
 	public List<BoardVO> getBoardList() {
 		String sql = "select * from codewiki order by regdate desc";
+		return jdbcTemplate.query(sql, new BoardRowMapper());
+	}
+	
+	public List<BoardVO> getBoardListC() {
+		String sql = "select * from codewiki where category='C' order by regdate desc";
+		return jdbcTemplate.query(sql, new BoardRowMapper());
+	}
+	public List<BoardVO> getBoardListPython() {
+		String sql = "select * from codewiki where category='Python' order by regdate desc";
+		return jdbcTemplate.query(sql, new BoardRowMapper());
+	}
+	public List<BoardVO> getBoardListCplus() {
+		String sql = "select * from codewiki where category='C++' order by regdate desc";
+		return jdbcTemplate.query(sql, new BoardRowMapper());
+	}
+	public List<BoardVO> getBoardListCsharp() {
+		String sql = "select * from codewiki where category='C#' order by regdate desc";
+		return jdbcTemplate.query(sql, new BoardRowMapper());
+	}
+	public List<BoardVO> getBoardListJava() {
+		String sql = "select * from codewiki where category='Java' order by regdate desc";
+		return jdbcTemplate.query(sql, new BoardRowMapper());
+	}
+	public List<BoardVO> getBoardListJS() {
+		String sql = "select * from codewiki where category='Javascript' order by regdate desc";
+		return jdbcTemplate.query(sql, new BoardRowMapper());
+	}
+	public List<BoardVO> getBoardListPHP() {
+		String sql = "select * from codewiki where category='PHP' order by regdate desc";
+		return jdbcTemplate.query(sql, new BoardRowMapper());
+	}
+	public List<BoardVO> getBoardListR(){
+		String sql = "select * from codewiki where category='R' order by regdate desc";
 		return jdbcTemplate.query(sql, new BoardRowMapper());
 	}
 }

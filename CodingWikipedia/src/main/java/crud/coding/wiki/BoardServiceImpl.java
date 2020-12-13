@@ -37,4 +37,39 @@ public class BoardServiceImpl implements BoardService{
 		return boardDAO.getBoardList();
 	}
 	
+	@Override
+	public List<BoardVO> getBoardListC(){
+		return boardDAO.getBoardListC();
+	}
+	
+	@Override
+	public List<BoardVO> getBoardListPython(){
+		return boardDAO.getBoardListPython();
+	}
+	
+	@Override
+	public List<BoardVO> getBoardListCsharp(){
+		return boardDAO.getBoardListCsharp();
+	}
+	@Override
+	public List<BoardVO> getBoardListCplus(){
+		return boardDAO.getBoardListCplus();
+	}
+	@Override
+	public List<BoardVO> getBoardListJava(){
+		return boardDAO.getBoardListJava();
+	}
+	@Override
+	public List<BoardVO> getBoardListJS(){
+		return boardDAO.getBoardListJS();
+	}
+	@Override
+	public List<BoardVO> getBoardListPHP(){
+		return boardDAO.getBoardListPHP();
+	}
+	@Override
+	public List<BoardVO> getBoardListR(){
+		return boardDAO.getBoardListR();
+	}
+	
 }
