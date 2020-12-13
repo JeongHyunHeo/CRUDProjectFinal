@@ -21,8 +21,8 @@
 		<a href="./R" id="R">R</a>
 	</div>
 	<header>
-		<h1>Get Language</h1>
-		<button class="button"><a href="addPage">
+		<h1></h1>
+		<button class="button"><a href="./addPage">
 			<span>add</span></a>
 		</button>
 	</header>

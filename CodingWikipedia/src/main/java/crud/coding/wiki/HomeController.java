@@ -106,7 +106,7 @@ public class HomeController {
 			System.out.println("데이터 삭제 실패!");
 		else
 			System.out.println("데이터 삭제 성공!");
-		return "redirect:/";
+		return "redirect:/main";
 	}
 	
 	
@@ -125,7 +125,7 @@ public class HomeController {
 		else
 			System.out.println("데이터 수정 성공!");
 		
-		return "redirect:/";
+		return "redirect:/main";
 	
 	}
 }
